@@ -4,6 +4,8 @@ const Encore = require('@symfony/webpack-encore');
 Encore  .setOutputPath('public/build')
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
+    .enableSingleRuntimeChunk()
+    .autoProvidejQuery()
     .addEntry('js/app',[
         './node_modules/jquery/dist/jquery.js',
         './node_modules/popper.js/dist/umd/popper.js',
